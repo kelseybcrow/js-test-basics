@@ -1,12 +1,11 @@
 //1. Given two numbers, write a function that will return  the larger number
 
 function largerNum(num1, num2) {
-    // you code here
-
+return Math.max(num1, num2);
 }
 
 // 2. Given two numbers, amount correct and amount possible of a test, return the corresponding letter grade.
-// Example: 
+// Example:
 // input: 23, 25
 // output: "A"
 // Example:
@@ -14,7 +13,17 @@ function largerNum(num1, num2) {
 // output: "F"
 
 function testGrader(score, possible) {
-
+    if ((score / possible) * 100 > 89) {
+        return "A";
+    } else if ((score / possible) * 100 > 79) {
+        return "B";
+    } else if ((score / possible) * 100 > 69) {
+        return "C";
+    } else if ((score / possible) * 100 > 59) {
+        return "D";
+    } else {
+        return "F";
+    };
 }
 
 
@@ -43,11 +52,16 @@ let myCar = {
     make: "Ford",
     model: "Mustang",
     color: "Red",
-    moving: false
+    moving: true
 }
 
 function isStopped(car) {
-
+    return !car.moving;
+    if (car.moving == true) {
+        return false;
+    } else {
+        return true;
+    };
 }
 
 //6. Write a function that returns true if a dish is yours and is dirty, or false if one of the statements is false
@@ -58,5 +72,9 @@ let dish = {
 }
 
 function washDish(dish) {
-
+    if (dish.yourDish == false || dish.isDirty == false) {
+        return false;
+    } else if (dish.yourDish == true && dish.isDirty == true) {
+        return true;
+    };
 }
