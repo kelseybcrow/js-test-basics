@@ -68,7 +68,7 @@ function daysPosition(day, offset) {
 // --------------------------------------------
 
 
-/** 2. Given a both a score and a score for par, return the corresponding term:
+/** 2. Given both a score and a score for par, return the corresponding term:
  *           difference |   term
  *    -----------------------------------
  *  (score == 1) || -3  |   "Ace"
